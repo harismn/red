@@ -2,14 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function Footer(props) {
+    console.log('footer render', props)
     return (
-        <Footer>
-            Total count: {props.count}
-        </Footer>
+            <footer>
+                Total count: {props.count}
+            </footer>
     )
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
+    console.log('mapStateToProps render', state)
     return {
         count: state.items.length
     };

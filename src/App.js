@@ -3,17 +3,19 @@ import './App.css';
 import Lister from './Lister';
 import store from './store';
 import { Provider } from 'react-redux';
+import Footer from './Footer.js'
 
 class App extends Component {
   render() {
     return (
-      
-      <Provider store={store}>
       <div className="App">
-        <Lister />
+        <Provider store={store}>
+          <div>
+            <Lister />
+            <Footer />
+          </div>
+        </Provider>
       </div>
-      </Provider>
-      
     );
   }
 }

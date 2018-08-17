@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import constants from './store/constants';
-import Footer from './Footer.js'
+
 
 
 function Lister(props) {
@@ -17,10 +17,9 @@ function Lister(props) {
             <ul>
                 {props.items.map((item, index) => {
                     return <li key={index}
-                    onClick={() => props.itemDelete(index)}>{`${index + 1}.${item}`}</li>
+                    onClick={() => props.itemDelete(index)}>{item}</li>
                 })}
             </ul>
-            <Footer />
         </div>
     );
 }
